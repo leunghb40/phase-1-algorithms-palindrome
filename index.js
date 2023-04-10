@@ -1,4 +1,11 @@
 function isPalindrome(word) {
+  const cleanedWord = word.toLowerCase().replace(/[^a-z0-9]/g, '');
+
+  // Reverse the cleaned word
+  const reversedWord = cleanedWord.split('').reverse().join('');
+
+  // Compare the cleaned word with the reversed word
+  return cleanedWord === reversedWord;
   // Write your algorithm here
 }
 
